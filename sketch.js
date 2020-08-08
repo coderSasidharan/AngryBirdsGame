@@ -105,7 +105,7 @@ function keyPressed(){
 }
 
 async function changeBG(){
-    var promise = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+    var promise = await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
     var data = await promise.json();
     var time = (data.datetime.slice(11,13));
     if(time<=18 && time>=5){
