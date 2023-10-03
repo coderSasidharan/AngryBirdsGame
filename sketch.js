@@ -21,7 +21,7 @@ function setup(){
     world = engine.world;
 
 
-    ground = new Ground(100000,height,1200,20);
+    ground = new Ground(600,height,1200,20);
     platform = new Ground(150, 305, 299, 169);
 
     box1 = new Box(700,320,70,70);
@@ -93,7 +93,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyCode===32 && count>0 && bird.body.speed<=5){
+    if(keyCode===32 && count>0){
         bird.allpos = []
        Matter.Body.setPosition(bird.body, {x:200, y:50})
         slingshot.connect.bodyA = bird.body;
